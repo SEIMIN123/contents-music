@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+#root {
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  flex-direction: column;
+  @include flex(flex, center, center);
+
+  .logo {
+
+    width: 40vw;
+    height: 35vh;
+    background: url(../pic/Askinglogo.jpg);
+    background-size: cover;
+    margin-top: -100px;
+    cursor: pointer;
+    @include flex(flex, center, center);
+
+  }
+
+  .movie {
+    margin: 40px;
+    @include flex(flex, center, center);
+
+  }
+
+}

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ECE93B;
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .chad {
+  width: 40vw;
+  height: 18vh;
+  margin-top: -25vw;
+  margin-left: -55vw;
+  font-size: 6vw;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .movie {
+  margin-bottom: -5vw;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-right: -42vw;
+  margin-top: -10vh;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .pic > div {
+  width: 30vw;
+  height: 50vh;
+  margin-top: -12.2vw;
+  margin-left: -30vw;
+  position: absolute;
+  background: url(../pic/hand-2.jpg);
+  background-size: cover;
+  z-index: 0;
+}

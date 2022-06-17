@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ECE93B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .prev {
+  width: 40vw;
+  height: 70vh;
+  margin: 50px;
+  border: 1px solid black;
+}
+#root .next {
+  width: 40vw;
+  height: 70vh;
+  margin: 60px;
+  border: 1px solid black;
+}

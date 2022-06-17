@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ECE93B;
+  font-family: "Permanent Marker", cursive;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .tri {
+  width: 45vw;
+  height: 90vh;
+  border: 5px solid #fff;
+  border-radius: 50px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .sp {
+  width: 30vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .max {
+  width: 40vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .icon {
+  width: 30vw;
+  height: 30vh;
+  margin-right: -100px;
+  background: url(../pic/light-1.jpg);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .soil {
+  width: 40vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

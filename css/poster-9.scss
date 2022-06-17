@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+#root {
+
+  width: 100vw;
+  height: 100vh;
+  background: url(../pic/sheena-1.jpg);
+  @include flex(flex, center, center);
+
+
+  .movie {
+    width: 47.8vw;
+    height: 54vh;
+    margin-left: -40vw;
+    border: 10px solid rgb(85, 85, 85);
+    border-radius: 20px;
+  }
+
+  .close {
+
+    width: 20vw;
+    height: 30vh;
+    margin-top: -8vh;
+    margin-right: -38vw;
+    position: absolute;
+    cursor: pointer;
+  }
+}

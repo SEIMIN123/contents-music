@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ECE93B;
+  font-family: "Permanent Marker", cursive;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .cir {
+  width: 51vw;
+  height: 100vh;
+  flex-direction: column;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .main {
+  width: 25vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .chad {
+  width: 30vw;
+  height: 10vh;
+  font-size: 4vw;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .icon {
+  width: 10vw;
+  height: 10vh;
+  margin-right: -40px;
+  background: url(../pic/light-1.jpg);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .asking {
+  width: 50vw;
+  height: 10vh;
+  font-size: 4vw;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .icon-1 {
+  width: 10vw;
+  height: 10vh;
+  margin-right: -40px;
+  background: url(../pic/light-1.jpg);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .ringo {
+  width: 50vw;
+  height: 10vh;
+  font-size: 4vw;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

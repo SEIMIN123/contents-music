@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+#root {
+
+  width: 100vw;
+  height: 100vh;
+  background: url(../pic/crystal-1.jpg);
+  background-size: cover;
+  @include flex(flex,center,center);
+
+  .movie {
+
+    margin-bottom: -5vw;
+  }
+  .close {
+
+    width: 55vw;
+    height: 10vh;
+    margin-top: -70vh;
+    position: absolute;
+    cursor: pointer;
+  }
+
+}
+

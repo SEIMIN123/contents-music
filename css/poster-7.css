@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: url(../pic/maximum.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .movie {
+  margin-bottom: -35vh;
+  border: 5px solid #c0272c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .close {
+  width: 90vw;
+  height: 30vh;
+  margin-top: -60vh;
+  position: absolute;
+  cursor: pointer;
+}

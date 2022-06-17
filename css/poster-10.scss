@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+#root {
+
+  width: 100vw;
+  height: 100vh;
+  background: url(../pic/fear-3.jpg);
+  background-size: cover;
+  @include flex(flex, center, center);
+
+  .movie {
+    width: 43vw;
+    height: 48.9vh;
+    margin-right: -51vw;
+    border: 10px solid black;
+    border-radius: 30px;
+  }
+
+  .close {
+
+    width: 50vw;
+    height: 40vh;
+    margin-left: -45vw;
+    position: absolute;
+    cursor: pointer;
+  }
+}

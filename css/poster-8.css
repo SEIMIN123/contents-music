@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: url(../pic/crystal-1.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root .movie {
+  margin-bottom: -5vw;
+}
+#root .close {
+  width: 55vw;
+  height: 10vh;
+  margin-top: -70vh;
+  position: absolute;
+  cursor: pointer;
+}

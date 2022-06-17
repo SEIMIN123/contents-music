@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ECE93B;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+  @include flex(flex, center, center);
+
+.tri {
+
+  width: 45vw;
+  height: 90vh;
+  border: 5px solid #fff;
+  border-radius: 50px;
+  flex-direction: column;
+  @include flex(flex, center, center);
+
+}
+
+.sp {
+
+  width: 30vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin: 50px;
+  @include flex(flex, center, center);
+
+}
+
+.max {
+
+  width: 40vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin: 50px;
+  @include flex(flex, center, center);
+}
+
+.icon {
+
+  width: 30vw;
+  height: 30vh;
+  margin-right: -100px;
+  background: url(../pic/light-1.jpg);
+  background-size: contain;
+  @include flex(flex, center, center);
+}
+
+.soil {
+
+    width: 40vw;
+    height: 10vh;
+    font-size: 3vw;
+    margin: 50px;
+    @include flex(flex, center, center);
+}
+}
+
+

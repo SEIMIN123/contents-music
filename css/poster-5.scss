@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+@keyframes img{
+	100% {
+    	transform: rotate(360deg);
+    }
+  }
+
+#root {
+
+  width: 100vwh;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  @include flex(flex,center,center);
+
+ .logo {
+
+    width: 360px;
+    height: 360px;
+    margin-left: -60vw;
+    position:absolute;
+    background: url(../pic/crosslogo.jpg);
+    background-repeat: no-repeat;
+    animation: img 50s linear infinite;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+  }
+
+  .movie {
+    border-radius: 10px;
+    margin-right: -35vw;
+    position:absolute;
+  }
+
+}
