@@ -15,7 +15,7 @@
 }
 #root .eq {
   width: 100vw;
-  height: 250vh;
+  height: 100vh;
   position: absolute;
   z-index: 0;
   filter: blur(3px);
@@ -86,6 +86,7 @@
 }
 #root .box1 {
   flex-direction: column;
+  margin: 8vw;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -118,6 +119,7 @@
 #root .box3 {
   flex-direction: column;
   z-index: 1;
+  margin: 8vw;
   display: flex;
   justify-content: center;
   align-items: center;

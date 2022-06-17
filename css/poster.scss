@@ -25,7 +25,7 @@
 
 .eq {
   width: 100vw;
-  height: 250vh;
+  height: 100vh;
   position: absolute;
   z-index: 0;
   filter: blur(3px);
@@ -112,6 +112,7 @@
 
   .box1 {
     flex-direction: column;
+    margin: 8vw;
     z-index: 1;
     @include flex(flex, center, center);
 
@@ -145,6 +146,7 @@
   .box3 {
     flex-direction: column;
     z-index: 1;
+    margin: 8vw;
     @include flex(flex, center, center);
 
   }
