@@ -20,21 +20,29 @@
   width: 100vw;
   height: 100vh;
   background-color: #ECE93B;
+  font-family: 'Permanent Marker', cursive;
+  flex-direction: column;
   @include flex(flex,center,center);
 
 
   .prev {
 
-    width: 40vw;
+    width: 59vw;
     height: 70vh;
     margin: 50px;
-    @include border();
+    font-size: 12vw;
+    cursor: pointer;
+  @include flex(flex,center,center);
+
   }
 
   .next {
-    width: 40vw;
-    height: 70vh;
+    width: 30vw;
+    height: 50vh;
+    font-size: 2vw;
     margin: 60px;
-    @include border();
+    cursor: pointer;
+    @include flex(flex,center,center);
+
   }
 }

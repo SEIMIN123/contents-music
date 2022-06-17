@@ -8,19 +8,29 @@
   width: 100vw;
   height: 100vh;
   background-color: #ECE93B;
+  font-family: "Permanent Marker", cursive;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #root .prev {
-  width: 40vw;
+  width: 59vw;
   height: 70vh;
   margin: 50px;
-  border: 1px solid black;
+  font-size: 12vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #root .next {
-  width: 40vw;
-  height: 70vh;
+  width: 30vw;
+  height: 50vh;
+  font-size: 2vw;
   margin: 60px;
-  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
