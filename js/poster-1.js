@@ -12,14 +12,14 @@ console.log(cir);
 const move = cir.children;
 
 let move1 = [ 
-  {transform: 'rotate(-8deg)'},
-  {transform: 'rotate(6deg)'},
-  {transform: 'rotate(-9deg)'}
+  {transform: 'rotate(-10deg)'},
+  {transform: 'rotate(10deg)'},
+  {transform: 'rotate(-10deg)'}
   
 ];
 
 let moving1= {
-  duration: 930,
+  duration: 940,
   iterations: Infinity
 };
 
