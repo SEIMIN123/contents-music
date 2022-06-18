@@ -21,7 +21,7 @@ let move1 = [
 ];
 
 let moving1= {
-  duration: 920,
+  duration: 950,
   iterations: Infinity
 };
 

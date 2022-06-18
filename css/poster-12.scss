@@ -19,18 +19,29 @@
 
   width: 100vw;
   height: 100vh;
-  background-color: #ECE93B;
+  // background-color: #ECE93B;
   font-family: 'Permanent Marker', cursive;
   flex-direction: column;
+  background-size: cover;
+  color: #fff;
   @include flex(flex,center,center);
 
+.fire {
 
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  @include flex(flex,center,center);
+}
   .prev {
 
     width: 59vw;
     height: 70vh;
     margin: 50px;
     font-size: 12vw;
+    position: absolute;
+    margin-top: -30vh;
     cursor: pointer;
   @include flex(flex,center,center);
 
@@ -40,7 +51,8 @@
     width: 30vw;
     height: 50vh;
     font-size: 2vw;
-    margin: 60px;
+    margin-bottom: -45vh;
+    position: absolute;
     cursor: pointer;
     @include flex(flex,center,center);
 
