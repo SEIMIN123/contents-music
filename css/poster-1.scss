@@ -15,84 +15,192 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  background-color: #ECE93B;
-  font-family: 'Permanent Marker', cursive;
-  cursor: pointer;
-  @include flex(flex, center, center);
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
+  }
+}
 
+@mixin pc {
 
-  .cir {
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
 
-    width: 51vw;
+@include pc {
+  #root {
+
+    width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    border-radius: 50%;
-    border: 5px solid white;
+    background-color: #ECE93B;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
     @include flex(flex, center, center);
+
+
+    .cir {
+
+      width: 51vw;
+      height: 100vh;
+      flex-direction: column;
+      border-radius: 50%;
+      border: 5px solid white;
+      @include flex(flex, center, center);
+    }
+
+    .main {
+
+      width: 25vw;
+      height: 10vh;
+      font-size: 3vw;
+      margin-top: -60px;
+      @include flex(flex, center, center);
+
+    }
+
+    .chad {
+
+      width: 30vw;
+      height: 10vh;
+      font-size: 4vw;
+      margin: 50px;
+      @include flex(flex, center, center);
+
+    }
+
+    .icon {
+
+      width: 10vw;
+      height: 10vh;
+      margin-right: -40px;
+      background: url(../pic/light-1.jpg);
+      background-size: contain;
+      @include flex(flex, center, center);
+    }
+
+    .asking {
+
+      width: 50vw;
+      height: 10vh;
+      font-size: 4vw;
+      margin: 20px;
+
+      @include flex(flex, center, center);
+
+    }
+
+    .icon-1 {
+
+      width: 10vw;
+      height: 10vh;
+      margin-right: -40px;
+      background: url(../pic/light-1.jpg);
+      background-size: contain;
+      @include flex(flex, center, center);
+    }
+
+    .ringo {
+
+      width: 50vw;
+      height: 10vh;
+      font-size: 4vw;
+      margin: 20px;
+
+      @include flex(flex, center, center);
+    }
   }
+}
 
-  .main {
+@include mobile {
 
-    width: 25vw;
-    height: 10vh;
-    font-size: 3vw;
-    margin-top: -60px;
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
     @include flex(flex, center, center);
 
-  }
 
-  .chad {
+    .cir {
 
-    width: 30vw;
-    height: 10vh;
-    font-size: 4vw;
-    margin: 50px;
-    @include flex(flex, center, center);
+      width: 100vw;
+      height: 60vh;
+      flex-direction: column;
+      border-radius: 50%;
+      border: 5px solid white;
+      @include flex(flex, center, center);
+    }
 
-  }
+    .main {
 
-  .icon {
+      width: 30vw;
+      height: 10vh;
+      font-size: 4vw;
+      margin: 1vh;
+      @include flex(flex, center, center);
 
-    width: 10vw;
-    height: 10vh;
-    margin-right: -40px;
-    background: url(../pic/light-1.jpg);
-    background-size: contain;
-    @include flex(flex, center, center);
-  }
+    }
 
-  .asking {
+    .chad {
 
-    width: 50vw;
-    height: 10vh;
-    font-size: 4vw;
-    margin: 20px;
+      width: 35vw;
+      height: 10vh;
+      font-size: 5vw;
+      margin: 1vh;
 
-    @include flex(flex, center, center);
+      @include flex(flex, center, center);
 
-  }
+    }
 
-  .icon-1 {
+    .icon {
 
-    width: 10vw;
-    height: 10vh;
-    margin-right: -40px;
-    background: url(../pic/light-1.jpg);
-    background-size: contain;
-    @include flex(flex, center, center);
-  }
+      width: 10vw;
+      height: 10vh;
+      background: url(../pic/light-1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      @include flex(flex, center, center);
+    }
 
-  .ringo {
+    .asking {
 
-    width: 50vw;
-    height: 10vh;
-    font-size: 4vw;
-    margin: 20px;
+      width: 60vw;
+      height: 10vh;
+      font-size: 5vw;
+      margin: 1vh;
+      @include flex(flex, center, center);
 
-    @include flex(flex, center, center);
+    }
+
+    .icon-1 {
+
+      width: 10vw;
+      height: 10vh;
+      background: url(../pic/light-1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      @include flex(flex, center, center);
+    }
+
+    .ringo {
+
+      width: 50vw;
+      height: 10vh;
+      font-size: 5vw;
+      margin: 1vh;
+      @include flex(flex, center, center);
+    }
   }
 }

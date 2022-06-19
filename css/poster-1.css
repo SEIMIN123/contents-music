@@ -1,82 +1,170 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ECE93B;
-  font-family: "Permanent Marker", cursive;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    font-family: "Permanent Marker", cursive;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .cir {
+    width: 51vw;
+    height: 100vh;
+    flex-direction: column;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .main {
+    width: 25vw;
+    height: 10vh;
+    font-size: 3vw;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .chad {
+    width: 30vw;
+    height: 10vh;
+    font-size: 4vw;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .icon {
+    width: 10vw;
+    height: 10vh;
+    margin-right: -40px;
+    background: url(../pic/light-1.jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .asking {
+    width: 50vw;
+    height: 10vh;
+    font-size: 4vw;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .icon-1 {
+    width: 10vw;
+    height: 10vh;
+    margin-right: -40px;
+    background: url(../pic/light-1.jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .ringo {
+    width: 50vw;
+    height: 10vh;
+    font-size: 4vw;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-#root .cir {
-  width: 51vw;
-  height: 100vh;
-  flex-direction: column;
-  border-radius: 50%;
-  border: 5px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .main {
-  width: 25vw;
-  height: 10vh;
-  font-size: 3vw;
-  margin-top: -60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .chad {
-  width: 30vw;
-  height: 10vh;
-  font-size: 4vw;
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .icon {
-  width: 10vw;
-  height: 10vh;
-  margin-right: -40px;
-  background: url(../pic/light-1.jpg);
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .asking {
-  width: 50vw;
-  height: 10vh;
-  font-size: 4vw;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .icon-1 {
-  width: 10vw;
-  height: 10vh;
-  margin-right: -40px;
-  background: url(../pic/light-1.jpg);
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .ringo {
-  width: 50vw;
-  height: 10vh;
-  font-size: 4vw;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media all and (max-width: 800px) {
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    font-family: "Permanent Marker", cursive;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .cir {
+    width: 100vw;
+    height: 60vh;
+    flex-direction: column;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .main {
+    width: 30vw;
+    height: 10vh;
+    font-size: 4vw;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .chad {
+    width: 35vw;
+    height: 10vh;
+    font-size: 5vw;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .icon {
+    width: 10vw;
+    height: 10vh;
+    background: url(../pic/light-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .asking {
+    width: 60vw;
+    height: 10vh;
+    font-size: 5vw;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .icon-1 {
+    width: 10vw;
+    height: 10vh;
+    background: url(../pic/light-1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .ringo {
+    width: 50vw;
+    height: 10vh;
+    font-size: 5vw;
+    margin: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

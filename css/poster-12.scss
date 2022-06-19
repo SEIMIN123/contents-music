@@ -15,25 +15,96 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  // background-color: #ECE93B;
-  font-family: 'Permanent Marker', cursive;
-  flex-direction: column;
-  background-size: cover;
-  color: #fff;
-  @include flex(flex,center,center);
-
-.fire {
-
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background-size: cover;
-  @include flex(flex,center,center);
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
+  }
 }
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    // background-color: #ECE93B;
+    font-family: 'Permanent Marker', cursive;
+    flex-direction: column;
+    background-size: cover;
+    color: #fff;
+    @include flex(flex, center, center);
+
+    .fire {
+
+      width: 100vw;
+      height: auto;
+      position: absolute;
+      background-size: cover;
+      @include flex(flex, center, center);
+    }
+
+    .prev {
+
+      width: 100vw;
+      height: 70vh;
+      margin: 50px;
+      font-size: 10vw;
+      position: absolute;
+      margin-top: -30vh;
+      cursor: pointer;
+      @include flex(flex, center, center);
+
+    }
+
+    .next {
+      width: 30vw;
+      height: 50vh;
+      font-size: 2vw;
+      margin-bottom: -45vh;
+      position: absolute;
+      cursor: pointer;
+      @include flex(flex, center, center);
+
+    }
+  }
+}
+
+@include mobile {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Permanent Marker', cursive;
+    flex-direction: column;
+    color: #fff;
+    @include flex(flex, center, center);
+
+    .fire {
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+    }
+
+    #back {
+
+      width: auto;
+      height: 100vh;
+    }
+  }
+
   .prev {
 
     width: 100vw;
@@ -42,19 +113,18 @@
     font-size: 10vw;
     position: absolute;
     margin-top: -30vh;
-    cursor: pointer;
-  @include flex(flex,center,center);
+    @include flex(flex, center, center);
 
   }
 
   .next {
-    width: 30vw;
+    width: 67vw;
     height: 50vh;
-    font-size: 2vw;
-    margin-bottom: -45vh;
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: -25vh;
     position: absolute;
-    cursor: pointer;
-    @include flex(flex,center,center);
+    @include flex(flex, center, center);
 
   }
 }

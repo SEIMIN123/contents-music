@@ -15,200 +15,426 @@
   border: 1px solid black;
 }
 
-#root {
-  width: 100vw;
-  height: 250vh;
-  background-color: #ECE93B;
-  position: absolute;
-  @include flex(flex,center,center);
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-
-.eq {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 0;
-  filter: blur(3px);
-  @include flex(flex,center,center);
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
+  }
 }
 
-.eq-bar {
-  width: 6vw;
-  flex-direction: column-reverse;
-  @include flex(flex,center,center);
-  
-  span {
-    width: 4vw;
-    height: 13.5vh;
-    transition: .2s ease all;
-    opacity: 1;
+@mixin pc {
 
-  @include flex(flex,center,center);
-
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
   }
-
-  
-  &:nth-child(1) span {
-    background: #fc0127;
-  }
-  
-  &:nth-child(2) span {
-    background: #fb0275;
-  }
-  
-  &:nth-child(3) span {
-    background: #b50cd3;
-  }
-  
-  &:nth-child(4) span {
-    background: #6407e9;
-  }
-  
-  &:nth-child(5) span {
-    background: #2a06a9;
-  }
-  
-  &:nth-child(6) span {
-    background: #080ad7;
-  }
-  
-  &:nth-child(7) span {
-    background: #0265e2;
-  }
-  
-  &:nth-child(8) span {
-    background: #03fcfc;
-  }
-  
-  &:nth-child(9) span {
-    background: #02fe46;
-  }
-  
-  &:nth-child(10) span {
-    background: #05fb0f;
-  }
-  
-  &:nth-child(11) span {
-    background: #97f611;
-  }
-  
-  &:nth-child(12) span {
-    background: #f5e506;
-  }
-  
-  &:nth-child(13) span {
-    background: #d7a414;
-  }
-  
-  &:nth-child(14) span {
-    background: #fc6b02;
-  }
-  
-  &:nth-child(15) span {
-    background: #df1506;
-  }
-  
 }
 
-  .box1 {
-    flex-direction: column;
-    margin: 8vw;
-    z-index: 1;
-    @include flex(flex, center, center);
-
-  }
-
-  .box1>div {
-
-    margin: 10vh;
-    background-size: contain;
-    border-radius: 20px;
-    z-index: 1;
-    @include flex(flex, center, center);
-    cursor: pointer;
-
-  }
-
-  .box2 {
-
-    width: 10vw;
+@include pc {
+  #root {
+    width: 100vw;
     height: 250vh;
-    background-color: #fff;
-    font-size: 7vw;
-    font-family: 'Permanent Marker', cursive;
-    writing-mode: vertical-rl;
-    z-index: 1;
-    cursor: pointer;
+    background-color: #ECE93B;
+    position: absolute;
     @include flex(flex, center, center);
 
-  }
 
-  .box3 {
-    flex-direction: column;
-    z-index: 1;
-    margin: 8vw;
+    .eq {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: 0;
+      filter: blur(3px);
+      @include flex(flex, center, center);
+    }
+
+    .eq-bar {
+      width: 6vw;
+      flex-direction: column-reverse;
+      @include flex(flex, center, center);
+
+      span {
+        width: 4vw;
+        height: 13.5vh;
+        transition: .2s ease all;
+        opacity: 1;
+
+        @include flex(flex, center, center);
+
+      }
+
+
+      &:nth-child(1) span {
+        background: #fc0127;
+      }
+
+      &:nth-child(2) span {
+        background: #fb0275;
+      }
+
+      &:nth-child(3) span {
+        background: #b50cd3;
+      }
+
+      &:nth-child(4) span {
+        background: #6407e9;
+      }
+
+      &:nth-child(5) span {
+        background: #2a06a9;
+      }
+
+      &:nth-child(6) span {
+        background: #080ad7;
+      }
+
+      &:nth-child(7) span {
+        background: #0265e2;
+      }
+
+      &:nth-child(8) span {
+        background: #03fcfc;
+      }
+
+      &:nth-child(9) span {
+        background: #02fe46;
+      }
+
+      &:nth-child(10) span {
+        background: #05fb0f;
+      }
+
+      &:nth-child(11) span {
+        background: #97f611;
+      }
+
+      &:nth-child(12) span {
+        background: #f5e506;
+      }
+
+      &:nth-child(13) span {
+        background: #d7a414;
+      }
+
+      &:nth-child(14) span {
+        background: #fc6b02;
+      }
+
+      &:nth-child(15) span {
+        background: #df1506;
+      }
+
+    }
+
+    .box1 {
+      flex-direction: column;
+      margin: 8vw;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box1>div {
+
+      margin: 10vh;
+      background-size: contain;
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    .box2 {
+
+      width: 10vw;
+      height: 250vh;
+      background-color: #fff;
+      font-size: 7vw;
+      font-family: 'Permanent Marker', cursive;
+      writing-mode: vertical-rl;
+      z-index: 1;
+      cursor: pointer;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3 {
+      flex-direction: column;
+      z-index: 1;
+      margin: 8vw;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3>div {
+      margin: 10vh;
+      background-size: contain;
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    //---------------------------------------
+
+    .pic1 {
+      width: 18.8vw;
+      height: 37vh;
+      background: url(../pic/redhot.jpg);
+    }
+
+    .pic2 {
+      width: 18vw;
+      height: 35.7vh;
+      background: url(../pic/cross.jpg);
+    }
+
+    .pic3 {
+      width: 17.5vw;
+      height: 35vh;
+      background: url(../pic/asking.jpg);
+    }
+
+    .pic4 {
+      width: 18vw;
+      height: 28vh;
+      background: url(../pic/maxi.jpg);
+    }
+
+    .pic5 {
+      width: 17.7vw;
+      height: 35vh;
+      background: url(../pic/crys.jpg);
+    }
+
+    .pic6 {
+      width: 18.7vw;
+      height: 36.8vh;
+      background: url(../pic/ringo.jpg);
+    }
+
+    .pic7 {
+      width: 18.7vw;
+      height: 36.7vh;
+      background: url(../pic/fear.jpg);
+    }
+
+    .pic8 {
+      width: 17vw;
+      height: 28.7vh;
+      background: url(../pic/soil.jpg);
+    }
+  }
+}
+
+@include mobile {
+
+  #root {
+    width: 100vw;
+    height: 110vh;
+    background-color: #ECE93B;
+    position: absolute;
     @include flex(flex, center, center);
 
+
+    .eq {
+      width: 100vw;
+      height: 110vh;
+      position: absolute;
+      z-index: 0;
+      filter: blur(3px);
+      @include flex(flex, center, center);
+    }
+
+    .eq-bar {
+      width: 6vw;
+      flex-direction: column-reverse;
+      @include flex(flex, center, center);
+
+      span {
+        width: 4vw;
+        height: 5vh;
+        transition: .2s ease all;
+        opacity: 1;
+        @include flex(flex, center, center);
+
+      }
+
+
+      &:nth-child(1) span {
+        background: #fc0127;
+      }
+
+      &:nth-child(2) span {
+        background: #fb0275;
+      }
+
+      &:nth-child(3) span {
+        background: #b50cd3;
+      }
+
+      &:nth-child(4) span {
+        background: #6407e9;
+      }
+
+      &:nth-child(5) span {
+        background: #2a06a9;
+      }
+
+      &:nth-child(6) span {
+        background: #080ad7;
+      }
+
+      &:nth-child(7) span {
+        background: #0265e2;
+      }
+
+      &:nth-child(8) span {
+        background: #03fcfc;
+      }
+
+      &:nth-child(9) span {
+        background: #02fe46;
+      }
+
+      &:nth-child(10) span {
+        background: #05fb0f;
+      }
+
+      &:nth-child(11) span {
+        background: #97f611;
+      }
+
+      &:nth-child(12) span {
+        background: #f5e506;
+      }
+
+      &:nth-child(13) span {
+        background: #d7a414;
+      }
+
+      &:nth-child(14) span {
+        background: #fc6b02;
+      }
+
+      &:nth-child(15) span {
+        background: #df1506;
+      }
+
+    }
+
+    .box1 {
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box1>div {
+
+      margin: 5vh;
+      background-size: cover;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box2 {
+
+      width: 10vw;
+      height: 110vh;
+      background-color: #fff;
+      font-size: 10vw;
+      font-family: 'Permanent Marker', cursive;
+      writing-mode: vertical-rl;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3 {
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .box3>div {
+      margin: 5vh;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-repeat: no-repeat; 
+      border-radius: 20px;
+      z-index: 1;
+      @include flex(flex, center, center);
+      cursor: pointer;
+
+    }
+
+    //---------------------------------------
+
+    .pic1 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/redhot.jpg);
+    }
+
+    .pic2 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/cross.jpg);
+    }
+
+    .pic3 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/asking.jpg);
+    }
+
+    .pic4 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/maxi.jpg);
+    }
+
+    .pic5 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/crys.jpg);
+    }
+
+    .pic6 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/ringo.jpg);
+    }
+
+    .pic7 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/fear.jpg);
+    }
+
+    .pic8 {
+      width: 31vw;
+      height: 67vh;
+      background: url(../pic/soil.jpg);
+    }
   }
-
-  .box3>div {
-    margin: 10vh;
-    background-size: contain;
-    border-radius: 20px;
-    z-index: 1;
-    @include flex(flex, center, center);
-    cursor: pointer;
-
-  }
-
-  //---------------------------------------
-
-  .pic1 {
-    width: 18.8vw;
-    height: 37vh;
-    background: url(../pic/redhot.jpg);
-  }
-
-  .pic2 {
-    width: 18vw;
-    height: 35.7vh;
-    background: url(../pic/cross.jpg);
-  }
-
-  .pic3 {
-    width: 17.5vw;
-    height: 35vh;
-    background: url(../pic/asking.jpg);
-  }
-
-  .pic4 {
-    width: 18vw;
-    height: 28vh;
-    background: url(../pic/maxi.jpg);
-  }
-
-  .pic5 {
-    width: 17.7vw;
-    height: 35vh;
-    background: url(../pic/crys.jpg);
-  }
-
-  .pic6 {
-    width: 18.7vw;
-    height: 36.8vh;
-    background: url(../pic/ringo.jpg);
-  }
-
-  .pic7 {
-    width: 18.7vw;
-    height: 36.7vh;
-    background: url(../pic/fear.jpg);
-  }
-
-  .pic8 {
-    width: 17vw;
-    height: 28.7vh;
-    background: url(../pic/soil.jpg);
-  }
-
 }
