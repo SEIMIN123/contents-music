@@ -1,42 +1,115 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @-webkit-keyframes img {
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes img {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-@keyframes img {
-  100% {
-    transform: rotate(360deg);
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+  #root {
+    width: 100vwh;
+    height: 100vh;
+    -webkit-transition: 1s;
+    transition: 1s;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #root .logo {
+    width: 360px;
+    height: 360px;
+    margin-left: -60vw;
+    position: absolute;
+    background: url(../pic/crosslogo.jpg);
+    background-repeat: no-repeat;
+    -webkit-animation: img 50s linear infinite;
+            animation: img 50s linear infinite;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    cursor: pointer;
+  }
+  #root .movie {
+    border-radius: 10px;
+    margin-right: -35vw;
+    position: absolute;
   }
 }
-#root {
-  width: 100vwh;
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#root .logo {
-  width: 360px;
-  height: 360px;
-  margin-left: -60vw;
-  position: absolute;
-  background: url(../pic/crosslogo.jpg);
-  background-repeat: no-repeat;
-  -webkit-animation: img 50s linear infinite;
-          animation: img 50s linear infinite;
-  transform-origin: 50% 50%;
-  cursor: pointer;
-}
-#root .movie {
-  border-radius: 10px;
-  margin-right: -35vw;
-  position: absolute;
+
+@media all and (max-width: 800px) {
+  #root {
+    width: 100vwh;
+    height: 100vh;
+    -webkit-transition: 1s;
+    transition: 1s;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #root .logo {
+    width: 46vw;
+    height: 30vh;
+    margin-top: -50vh;
+    background: url(../pic/crosslogo.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    -webkit-animation: img 50s linear infinite;
+            animation: img 50s linear infinite;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    position: absolute;
+  }
+  #root .movie {
+    width: 90vw;
+    height: 30vh;
+    position: absolute;
+    margin-bottom: -50vw;
+    overflow: hidden;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #root #back {
+    width: 100%;
+    height: auto;
+  }
 }

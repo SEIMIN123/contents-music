@@ -15,26 +15,96 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  background: url(../pic/crystal-1.jpg);
-  background-size: cover;
-  @include flex(flex,center,center);
-
-  .movie {
-
-    margin-bottom: -5vw;
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
   }
-  .close {
-
-    width: 55vw;
-    height: 10vh;
-    margin-top: -70vh;
-    position: absolute;
-    cursor: pointer;
-  }
-
 }
 
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background: url(../pic/crystal-1.jpg);
+    background-size: cover;
+    @include flex(flex, center, center);
+
+    .movie {
+
+      margin-bottom: -5vw;
+    }
+
+    .close {
+
+      width: 55vw;
+      height: 10vh;
+      margin-top: -70vh;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+}
+
+@include mobile {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background: url(../pic/cry-mobile.jpg);
+    transition: 1s;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    @include flex(flex, center, center);
+
+    .movie {
+      width: 97vw;
+      height: 50vh;
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+      @include flex(flex, center, center);
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .close {
+
+    width: 90vw;
+    height: 10vh;
+    margin-top: -50vh;
+    position: absolute;
+  }
+
+  .logo {
+
+    width: 42vw;
+    height: 25vh;
+    background: url(../pic/crystal_lake__logo_icon.png);
+    margin-bottom: -65vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+  }
+}

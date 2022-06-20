@@ -14,36 +14,99 @@
 @mixin border {
   border: 1px solid black;
 }
-@keyframes img{
-	100% {
-    	transform: rotate(360deg);
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
+  }
+}
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@keyframes img {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vwh;
+    height: 100vh;
+    transition: 1s;
+    background-color: rgb(0, 0, 0);
+    @include flex(flex, center, center);
+
+    .logo {
+
+      width: 360px;
+      height: 360px;
+      margin-left: -60vw;
+      position: absolute;
+      background: url(../pic/crosslogo.jpg);
+      background-repeat: no-repeat;
+      animation: img 50s linear infinite;
+      transform-origin: 50% 50%;
+      cursor: pointer;
+    }
+
+    .movie {
+      border-radius: 10px;
+      margin-right: -35vw;
+      position: absolute;
     }
   }
+}
 
-#root {
+@include mobile {
+  #root {
 
-  width: 100vwh;
-  height: 100vh;
-  background-color: rgb(0, 0, 0);
-  @include flex(flex,center,center);
+    width: 100vwh;
+    height: 100vh;
+    transition: 1s;
+    background-color: rgb(0, 0, 0);
+    @include flex(flex, center, center);
 
- .logo {
+    .logo {
 
-    width: 360px;
-    height: 360px;
-    margin-left: -60vw;
-    position:absolute;
-    background: url(../pic/crosslogo.jpg);
-    background-repeat: no-repeat;
-    animation: img 50s linear infinite;
-    transform-origin: 50% 50%;
-    cursor: pointer;
+      width: 46vw;
+      height: 30vh;
+      margin-top: -50vh;
+      background: url(../pic/crosslogo.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-attachment:initial;
+      background-repeat: no-repeat; 
+      animation: img 50s linear infinite;
+      transform-origin: 50% 50%;
+      position: absolute;
+    }
+
+    .movie {
+      width: 90vw;
+      height: 30vh;
+      position: absolute;
+      margin-bottom: -50vw;
+      overflow: hidden;
+      z-index: 2;
+      @include flex(flex, center, center);
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
   }
-
-  .movie {
-    border-radius: 10px;
-    margin-right: -35vw;
-    position:absolute;
-  }
-
 }

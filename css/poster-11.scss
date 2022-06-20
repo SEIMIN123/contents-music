@@ -15,26 +15,88 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  background: url(../pic/soil-2.jpg);
-  background-size: cover;
-  @include flex(flex,center,center);
-
-  .movie {
-    width: 47.8vw;
-    height: 54vh;
-    margin-left: -40vw;
-
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
   }
-  .close {
+}
 
-    width: 25vw;
-    height: 65vh;
-    margin-right: -40vw;
-    position: absolute;
-    cursor: pointer;
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background: url(../pic/soil-2.jpg);
+    background-size: cover;
+    @include flex(flex, center, center);
+
+    .movie {
+      width: 47.8vw;
+      height: 54vh;
+      margin-left: -40vw;
+
+    }
+
+    .close {
+
+      width: 25vw;
+      height: 65vh;
+      margin-right: -40vw;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+}
+
+@include mobile {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background: url(../pic/soil-mobile.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    @include flex(flex, center, center);
+
+    .movie {
+      width: 90vw;
+      height:30vh;
+      margin-bottom: -15vh;
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+      @include flex(flex, center, center);
+
+    }
+
+    .close {
+
+      width: 37vw;
+      height: 27vh;
+      margin-top: -55vh;
+      position: absolute;
+
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
   }
 }

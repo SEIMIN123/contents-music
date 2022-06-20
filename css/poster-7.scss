@@ -15,21 +15,42 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  background: url(../pic/maximum.jpg);
-  background-size: cover;
-  @include flex(flex, center, center);
-
-  .movie {
-
-    margin-bottom: -35vh;
-    border: 5px solid #c0272c;
-    border-radius: 10px;
-    @include flex(flex, center, center);
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
   }
+}
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background: url(../pic/maximum.jpg);
+    background-size: cover;
+    @include flex(flex, center, center);
+
+    .movie {
+
+      margin-bottom: -35vh;
+      border: 5px solid #c0272c;
+      border-radius: 10px;
+      @include flex(flex, center, center);
+    }
+
     .close {
 
       width: 90vw;
@@ -39,3 +60,45 @@
       cursor: pointer;
     }
   }
+}
+
+@include mobile {
+
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background: url(../pic/maximum-mobile.jpg);
+    transition: 1s;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
+    @include flex(flex, center, center);
+
+    .movie {
+      width: 100vw;
+      height: 32.5vh;
+      border: 5px solid #c0272c;
+      border-radius: 10px;
+      position: absolute;
+      overflow: hidden;
+      z-index: 2;
+      @include flex(flex, center, center);
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .close {
+
+    width: 90vw;
+    height: 10vh;
+    margin-top: -90vh;
+    position: absolute;
+  }
+}

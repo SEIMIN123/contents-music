@@ -15,51 +15,131 @@
   border: 1px solid black;
 }
 
-#root {
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {}
 
-  width: 100vw;
-  height: 100vh;
-  background-color: #ECE93B;
-  font-family: 'Permanent Marker', cursive;
-  @include flex(flex, center, center);
-
-  .chad {
-
-    width: 40vw;
-    height: 18vh;
-    margin-top: -25vw;
-    margin-left: -55vw;
-    font-size: 6vw;
-    z-index: 1;
-    cursor: pointer;
-
-    @include flex(flex, center, center);
-
-
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@mixin mobile {
+  @media all and (max-width:800px) {
+    @content;
   }
-
-  .movie {
-    margin-bottom: -5vw;
-    border: 5px solid white;  
-    border-radius: 10px;
-    margin-right: -42vw;
-    margin-top: -10vh;
-    position: absolute;
-    z-index: 2;
-    @include flex(flex, center, center);
-
-  }
-
-  .pic >div {
-    width: 30vw;
-    height: 50vh;
-    margin-top: -12.2vw;
-    margin-left: -30vw;
-    position: absolute;
-    background: url(../pic/hand-2.jpg);
-    background-size: cover;
-    z-index: 0;
-  }
-
-
 }
+
+@mixin pc {
+
+  /* PC (해상도 1024px)*/
+  @media all and (min-width:1024px) {
+    @content;
+  }
+}
+
+@include pc {
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    background-color: #ECE93B;
+    font-family: 'Permanent Marker', cursive;
+    @include flex(flex, center, center);
+
+    .chad {
+
+      width: 40vw;
+      height: 18vh;
+      margin-top: -25vw;
+      margin-left: -55vw;
+      font-size: 6vw;
+      z-index: 1;
+      cursor: pointer;
+
+      @include flex(flex, center, center);
+
+
+    }
+
+    .movie {
+      margin-bottom: -5vw;
+      border: 5px solid white;
+      border-radius: 10px;
+      margin-right: -42vw;
+      margin-top: -10vh;
+      position: absolute;
+      z-index: 2;
+      @include flex(flex, center, center);
+
+    }
+
+    .pic>div {
+      width: 30vw;
+      height: 50vh;
+      margin-top: -12.2vw;
+      margin-left: -30vw;
+      position: absolute;
+      background: url(../pic/hand-2.jpg);
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+}
+
+@include mobile {
+
+  #root {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECE93B;
+    transition: 1s;
+    font-family: 'Permanent Marker', cursive;
+    @include flex(flex, center, center);
+
+    .chad {
+
+      width: 70vw;
+      height: 20vh;
+      margin-top: -70vh;
+      font-size: 10vw;
+      z-index: 1;
+      @include flex(flex, center, center);
+
+    }
+
+    .pic>div {
+      width: 35vw;
+      height: 30vh;
+      margin-top: -35vh;
+      margin-left: -40vw;
+      position: absolute;
+      background: url(../pic/hand-2.jpg);
+      background-size: cover;
+      flex-direction: column;
+      background-position: center center;
+      background-attachment:initial;
+      background-repeat: no-repeat; 
+      z-index: 0;
+    }
+
+    .movie {
+      width: 90vw;
+      height: 30vh;
+      margin-bottom: -50vw;
+      border: 5px solid white;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 2;
+      overflow: hidden;
+      @include flex(flex, center, center);
+
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
+    }
+
+    }
+
+
+  }

@@ -38,6 +38,7 @@
 
     width: 100vw;
     height: 100vh;
+    transition: 1s;
     // background-color: #ECE93B;
     font-family: 'Permanent Marker', cursive;
     flex-direction: column;
@@ -85,12 +86,13 @@
 
     width: 100vw;
     height: 100vh;
+    transition: 1s;
     font-family: 'Permanent Marker', cursive;
     flex-direction: column;
     color: #fff;
     @include flex(flex, center, center);
 
-    .fire {
+    .movie {
       padding: 0;
       width: 100vw;
       height: 100vh;

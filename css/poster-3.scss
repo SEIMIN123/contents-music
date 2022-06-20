@@ -38,6 +38,7 @@
     width: 100vw;
     height: 100vh;
     background-color: #ECE93B;
+    transition: 1s;
     font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     @include flex(flex, center, center);
@@ -98,6 +99,7 @@
   #root {
     width: 100vw;
     height: 100vh;
+    transition: 1s;
     background-color: #ECE93B;
     font-family: 'Permanent Marker', cursive;
     cursor: pointer;

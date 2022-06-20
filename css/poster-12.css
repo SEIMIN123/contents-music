@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -12,22 +13,39 @@
   #root {
     width: 100vw;
     height: 100vh;
-    font-family: "Permanent Marker", cursive;
-    flex-direction: column;
+    -webkit-transition: 1s;
+    transition: 1s;
+    font-family: 'Permanent Marker', cursive;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-size: cover;
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root .fire {
     width: 100vw;
     height: auto;
     position: absolute;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root .prev {
     width: 100vw;
@@ -37,9 +55,15 @@
     position: absolute;
     margin-top: -30vh;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root .next {
     width: 30vw;
@@ -48,23 +72,41 @@
     margin-bottom: -45vh;
     position: absolute;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
+
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
-    font-family: "Permanent Marker", cursive;
-    flex-direction: column;
+    -webkit-transition: 1s;
+    transition: 1s;
+    font-family: 'Permanent Marker', cursive;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  #root .fire {
+  #root .movie {
     padding: 0;
     width: 100vw;
     height: 100vh;
@@ -75,7 +117,6 @@
     width: auto;
     height: 100vh;
   }
-
   .prev {
     width: 100vw;
     height: 70vh;
@@ -83,11 +124,16 @@
     font-size: 10vw;
     position: absolute;
     margin-top: -30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .next {
     width: 67vw;
     height: 50vh;
@@ -95,8 +141,14 @@
     text-align: center;
     margin-bottom: -25vh;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

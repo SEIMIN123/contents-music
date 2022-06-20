@@ -11,12 +11,13 @@
   <div id="root">
     <div class="close"></div>
     <div class="movie">
-      <video src="../movie/crystal.mp4" width="1200" autoplay loop controls></video>
+      <video src="../movie/crystal.mp4" width="1200" id="back" autoplay loop controls></video>
     </div>
+    <div class="logo"></div>
   </div>
   <script>
-    const close = document.querySelector('.close')
-    close.addEventListener('click', () => {
+    const clo = document.querySelector('.close')
+    clo.addEventListener('click', () => {
       let page = '../index.html';
       location.href = page;
     });
