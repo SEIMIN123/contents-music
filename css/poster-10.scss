@@ -69,9 +69,9 @@
     transition: 1s;
     background: url(../pic/fear-mobile.jpg);
     transition: 1s;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
-    background-attachment: initial;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     @include flex(flex, center, center);
 
