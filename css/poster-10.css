@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -13,19 +12,12 @@
   #root {
     width: 100vw;
     height: 100vh;
-    -webkit-transition: 1s;
     transition: 1s;
     background: url(../pic/fear-3.jpg);
     background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     width: 43vw;
@@ -40,27 +32,20 @@
     cursor: pointer;
   }
 }
-
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
-    -webkit-transition: 1s;
     transition: 1s;
     background: url(../pic/fear-mobile.jpg);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    transition: 1s;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     width: 90vw;
@@ -69,15 +54,9 @@
     overflow: hidden;
     margin-top: -3vh;
     z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root #back {
     width: 100%;

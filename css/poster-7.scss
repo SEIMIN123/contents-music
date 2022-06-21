@@ -70,7 +70,7 @@
     height: 100vh;
     background: url(../pic/maximum-mobile.jpg);
     transition: 1s;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-attachment: initial;
     background-repeat: no-repeat;
@@ -78,7 +78,7 @@
 
     .movie {
       width: 100vw;
-      height: 32.5vh;
+      height: 29.6vh;
       border: 5px solid #c0272c;
       border-radius: 10px;
       position: absolute;

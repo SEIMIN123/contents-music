@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -13,33 +12,20 @@
   #root {
     width: 100vw;
     height: 100vh;
-    -webkit-transition: 1s;
     transition: 1s;
     background: url(../pic/maximum.jpg);
     background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     margin-bottom: -35vh;
     border: 5px solid #c0272c;
     border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .close {
     width: 90vw;
@@ -49,50 +35,37 @@
     cursor: pointer;
   }
 }
-
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
     background: url(../pic/maximum-mobile.jpg);
-    -webkit-transition: 1s;
     transition: 1s;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-attachment: initial;
     background-repeat: no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     width: 100vw;
-    height: 32.5vh;
+    height: 29.6vh;
     border: 5px solid #c0272c;
     border-radius: 10px;
     position: absolute;
     overflow: hidden;
     z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root #back {
     width: 100%;
     height: auto;
   }
+
   .close {
     width: 90vw;
     height: 10vh;

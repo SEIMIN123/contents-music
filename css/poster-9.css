@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -13,18 +12,11 @@
   #root {
     width: 100vw;
     height: 100vh;
-    -webkit-transition: 1s;
     transition: 1s;
     background: url(../pic/sheena-1.jpg);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     width: 47.3vw;
@@ -40,28 +32,20 @@
     cursor: pointer;
   }
 }
-
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
-    -webkit-transition: 1s;
     transition: 1s;
     background-color: #ffffe5;
     background: url(../pic/ringo-mobile.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-attachment: initial;
     background-repeat: no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .movie {
     width: 64vw;
@@ -70,15 +54,9 @@
     position: absolute;
     overflow: hidden;
     z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #root .close {
     width: 20vw;

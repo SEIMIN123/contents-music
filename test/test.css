@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #root {
@@ -10,261 +9,164 @@
   height: 250vh;
   background-color: #ECE93B;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .eq {
   width: 100vw;
   height: 250vh;
   position: absolute;
   z-index: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  filter: blur(5px);
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .eq-bar {
   width: 6vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column-reverse;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .eq-bar span {
   width: 4vw;
   height: 13.5vh;
-  -webkit-transition: .2s ease all;
-  transition: .2s ease all;
+  transition: 0.2s ease all;
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .eq-bar:nth-child(1) span {
   background: #fc0127;
 }
-
 #root .eq-bar:nth-child(2) span {
   background: #fb0275;
 }
-
 #root .eq-bar:nth-child(3) span {
   background: #b50cd3;
 }
-
 #root .eq-bar:nth-child(4) span {
   background: #6407e9;
 }
-
 #root .eq-bar:nth-child(5) span {
   background: #2a06a9;
 }
-
 #root .eq-bar:nth-child(6) span {
   background: #080ad7;
 }
-
 #root .eq-bar:nth-child(7) span {
   background: #0265e2;
 }
-
 #root .eq-bar:nth-child(8) span {
   background: #03fcfc;
 }
-
 #root .eq-bar:nth-child(9) span {
   background: #02fe46;
 }
-
 #root .eq-bar:nth-child(10) span {
   background: #05fb0f;
 }
-
 #root .eq-bar:nth-child(11) span {
   background: #97f611;
 }
-
 #root .eq-bar:nth-child(12) span {
   background: #f5e506;
 }
-
 #root .eq-bar:nth-child(13) span {
   background: #d7a414;
 }
-
 #root .eq-bar:nth-child(14) span {
   background: #fc6b02;
 }
-
 #root .eq-bar:nth-child(15) span {
   background: #df1506;
 }
-
 #root .box1 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .box1 > div {
   margin: 10vh;
   background-size: contain;
   border-radius: 20px;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-
 #root .box2 {
   width: 10vw;
   height: 250vh;
   background-color: #fff;
   font-size: 7vw;
-  font-family: 'Permanent Marker', cursive;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  font-family: "Permanent Marker", cursive;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   z-index: 1;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .box3 {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #root .box3 > div {
   margin: 10vh;
   background-size: contain;
   border-radius: 20px;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-
 #root .pic1 {
   width: 20vw;
   height: 39vh;
   background: url(../pic/redhot.jpg);
 }
-
 #root .pic2 {
   width: 19vw;
   height: 37.5vh;
   background: url(../pic/cross.jpg);
 }
-
 #root .pic3 {
   width: 19vw;
   height: 37.5vh;
   background: url(../pic/asking.jpg);
 }
-
 #root .pic4 {
   width: 19vw;
   height: 29.3vh;
   background: url(../pic/maxi.jpg);
 }
-
 #root .pic5 {
   width: 19vw;
   height: 37.5vh;
   background: url(../pic/crys.jpg);
 }
-
 #root .pic6 {
   width: 19vw;
   height: 37.5vh;
   background: url(../pic/ringo.jpg);
 }
-
 #root .pic7 {
   width: 19vw;
   height: 37.5vh;
   background: url(../pic/fear.jpg);
 }
-
 #root .pic8 {
   width: 17vw;
   height: 29.3vh;

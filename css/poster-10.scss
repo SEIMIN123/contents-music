@@ -68,7 +68,11 @@
     height: 100vh;
     transition: 1s;
     background: url(../pic/fear-mobile.jpg);
-    flex-direction: column;
+    transition: 1s;
+    background-size: contain;
+    background-position: center center;
+    background-attachment: initial;
+    background-repeat: no-repeat;
     @include flex(flex, center, center);
 
     .movie {
