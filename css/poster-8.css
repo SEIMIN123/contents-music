@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
@@ -12,12 +13,19 @@
   #root {
     width: 100vw;
     height: 100vh;
+    -webkit-transition: 1s;
     transition: 1s;
     background: url(../pic/crystal-1.jpg);
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root .movie {
     margin-bottom: -5vw;
@@ -30,19 +38,27 @@
     cursor: pointer;
   }
 }
+
 @media all and (max-width: 800px) {
   #root {
     width: 100vw;
     height: 100vh;
     background: url(../pic/cry-mobile.jpg);
+    -webkit-transition: 1s;
     transition: 1s;
     background-size: contain;
     background-position: center center;
     background-attachment: initial;
     background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root .movie {
     width: 97vw;
@@ -50,22 +66,26 @@
     position: absolute;
     overflow: hidden;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #root #back {
     width: 100%;
     height: auto;
   }
-
   .close {
     width: 90vw;
     height: 10vh;
     margin-top: -40vh;
     position: absolute;
   }
-
   .logo {
     width: 45.5vw;
     height: 23.5vh;
