@@ -2,19 +2,16 @@ const MAX_BAR_HEIGHT = 18;
 
 addBarSpans();
 
-setInterval(() => {
-  setRandomBars();
-}, 200);
 
 function setRandomBars(maxBarHeight) {
   const bars = document.getElementsByClassName('eq-bar');
-
+  
   for (let i = 0; i < bars.length; i++) {
 
     let spans = bars[i].getElementsByTagName('span');
     let activeSpanCount = getActiveSpans(spans);
     let newHeight = getRandomHeight(MAX_BAR_HEIGHT);
-
+    
     for (let j = 0; j < spans.length; j++) {
 
       if (newHeight > activeSpanCount) {
@@ -22,7 +19,7 @@ function setRandomBars(maxBarHeight) {
       } else if (j > newHeight) {
         spans[j].style.opacity = '0';
       }
-
+      
       let upperSpan = MAX_BAR_HEIGHT - j;
       if (newHeight > MAX_BAR_HEIGHT - 5 && upperSpan < 5) {
         spans[j].style.opacity = '0.' + upperSpan;
@@ -30,6 +27,11 @@ function setRandomBars(maxBarHeight) {
     }
   }
 }
+setInterval(() => {
+  setRandomBars();
+}, 200);
+
+//---------------------------------------------
 
 function getActiveSpans(spans) {
   let counter = 0;
