@@ -32,6 +32,10 @@
     height: 48.9vh;
     margin-right: -47.7vw;
   }
+  #root #back {
+    width: 100%;
+    height: auto;
+  }
   #root .close {
     width: 50vw;
     height: 40vh;

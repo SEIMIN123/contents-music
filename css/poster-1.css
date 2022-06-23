@@ -51,7 +51,7 @@
     width: 25vw;
     height: 10vh;
     font-size: 3vw;
-    margin-top: -60px;
+    margin-top: -3vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -128,7 +128,6 @@
     width: 50vw;
     height: 10vh;
     font-size: 4vw;
-    margin: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

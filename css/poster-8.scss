@@ -44,8 +44,14 @@
     @include flex(flex, center, center);
 
     .movie {
-
+      width: 60vw;
       margin-bottom: -5vw;
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
     }
 
     .close {

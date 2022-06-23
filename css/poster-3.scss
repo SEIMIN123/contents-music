@@ -59,7 +59,7 @@
       width: 30vw;
       height: 10vh;
       font-size: 3vw;
-      margin: 50px;
+      margin: 2vh;
       @include flex(flex, center, center);
 
     }
@@ -75,9 +75,9 @@
 
     .icon {
 
-      width: 30vw;
+      width: 25vw;
       height: 30vh;
-      margin-right: -100px;
+      margin-right: -6vw;
       background: url(../pic/light-1.jpg);
       background-size: contain;
       @include flex(flex, center, center);

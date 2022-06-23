@@ -30,6 +30,10 @@
     height: 54vh;
     margin-left: -40vw;
   }
+  #root #back {
+    width: 100%;
+    height: auto;
+  }
   #root .close {
     width: 25vw;
     height: 65vh;

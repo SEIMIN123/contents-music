@@ -59,6 +59,7 @@
     }
 
     .movie {
+      width: 50vw;
       margin-bottom: -5vw;
       border: 5px solid white;
       border-radius: 10px;
@@ -68,6 +69,12 @@
       z-index: 2;
       @include flex(flex, center, center);
 
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
     }
 
     .pic>div {

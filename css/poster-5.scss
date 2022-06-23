@@ -42,7 +42,7 @@
 @include pc {
   #root {
 
-    width: 100vwh;
+    width: 100vw;
     height: 100vh;
     transition: 1s;
     background-color: rgb(0, 0, 0);
@@ -50,12 +50,15 @@
 
     .logo {
 
-      width: 360px;
-      height: 360px;
+      width: 40vw;
+      height: 40vh;
       margin-left: -60vw;
       position: absolute;
       background: url(../pic/crosslogo.jpg);
-      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      background-attachment:initial;
+      background-repeat: no-repeat; 
       animation: img 50s linear infinite;
       transform-origin: 50% 50%;
       cursor: pointer;
@@ -65,6 +68,11 @@
       border-radius: 10px;
       margin-right: -35vw;
       position: absolute;
+    }
+    #back {
+
+      width: 100%;
+      height: auto;
     }
   }
 }

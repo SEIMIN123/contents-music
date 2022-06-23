@@ -44,11 +44,17 @@
     @include flex(flex, center, center);
 
     .movie {
-
+      width: 50vw;
       margin-bottom: -35vh;
       border: 5px solid #c0272c;
       border-radius: 10px;
       @include flex(flex, center, center);
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
     }
 
     .close {

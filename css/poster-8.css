@@ -28,7 +28,12 @@
             align-items: center;
   }
   #root .movie {
+    width: 60vw;
     margin-bottom: -5vw;
+  }
+  #root #back {
+    width: 100%;
+    height: auto;
   }
   #root .close {
     width: 55vw;

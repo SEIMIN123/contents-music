@@ -28,6 +28,7 @@
             align-items: center;
   }
   #root .movie {
+    width: 50vw;
     margin-bottom: -35vh;
     border: 5px solid #c0272c;
     border-radius: 10px;
@@ -40,6 +41,10 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #root #back {
+    width: 100%;
+    height: auto;
   }
   #root .close {
     width: 90vw;

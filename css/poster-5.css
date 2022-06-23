@@ -24,7 +24,7 @@
 /* PC (해상도 1024px)*/
 @media all and (min-width: 1024px) {
   #root {
-    width: 100vwh;
+    width: 100vw;
     height: 100vh;
     -webkit-transition: 1s;
     transition: 1s;
@@ -40,11 +40,14 @@
             align-items: center;
   }
   #root .logo {
-    width: 360px;
-    height: 360px;
+    width: 40vw;
+    height: 40vh;
     margin-left: -60vw;
     position: absolute;
     background: url(../pic/crosslogo.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-attachment: initial;
     background-repeat: no-repeat;
     -webkit-animation: img 50s linear infinite;
             animation: img 50s linear infinite;
@@ -56,6 +59,10 @@
     border-radius: 10px;
     margin-right: -35vw;
     position: absolute;
+  }
+  #root #back {
+    width: 100%;
+    height: auto;
   }
 }
 

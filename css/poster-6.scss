@@ -46,19 +46,30 @@
     .logo {
 
       width: 40vw;
-      height: 35vh;
+      height: 40vh;
       background: url(../pic/Askinglogo.jpg);
       background-size: cover;
-      margin-top: -100px;
+      background-position: center center;
+      background-attachment: initial;
+      background-repeat: no-repeat;
+      margin-top: -5vh;
       cursor: pointer;
       @include flex(flex, center, center);
 
     }
 
     .movie {
-      margin: 40px;
+      width: 45vw;
+      margin-top: -5vh;
+      margin: 3vh;
       @include flex(flex, center, center);
 
+    }
+
+    #back {
+
+      width: 100%;
+      height: auto;
     }
   }
 }
