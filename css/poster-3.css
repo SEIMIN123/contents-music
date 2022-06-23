@@ -80,9 +80,12 @@
   #root .icon {
     width: 25vw;
     height: 30vh;
-    margin-right: -6vw;
+    margin-right: -1vw;
     background: url(../pic/light-1.jpg);
     background-size: contain;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -80,7 +80,7 @@
   #root .icon {
     width: 10vw;
     height: 10vh;
-    margin-right: -40px;
+    margin-right: -3vw;
     background: url(../pic/light-1.jpg);
     background-size: contain;
     display: -webkit-box;
@@ -111,7 +111,7 @@
   #root .icon-1 {
     width: 10vw;
     height: 10vh;
-    margin-right: -40px;
+    margin-right: -3vw;
     background: url(../pic/light-1.jpg);
     background-size: contain;
     display: -webkit-box;
