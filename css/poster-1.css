@@ -63,9 +63,9 @@
             align-items: center;
   }
   #root .chad {
-    width: 30vw;
+    width: 50vw;
     height: 10vh;
-    font-size: 4vw;
+    font-size: 3.7vw;
     margin: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -194,7 +194,7 @@
             align-items: center;
   }
   #root .chad {
-    width: 35vw;
+    width: 70vw;
     height: 10vh;
     font-size: 5vw;
     margin: 1vh;

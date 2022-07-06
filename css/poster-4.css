@@ -28,11 +28,11 @@
             align-items: center;
   }
   #root .chad {
-    width: 40vw;
+    width: 50vw;
     height: 18vh;
     margin-top: -25vw;
     margin-left: -55vw;
-    font-size: 6vw;
+    font-size: 3vw;
     z-index: 1;
     cursor: pointer;
     display: -webkit-box;
@@ -72,7 +72,7 @@
     width: 30vw;
     height: 50vh;
     margin-top: -12.2vw;
-    margin-left: -30vw;
+    margin-left: -40vw;
     position: absolute;
     background: url(../pic/hand-2.jpg);
     background-size: cover;
@@ -99,10 +99,10 @@
             align-items: center;
   }
   #root .chad {
-    width: 70vw;
+    width: 100vw;
     height: 20vh;
     margin-top: -70vh;
-    font-size: 10vw;
+    font-size: 8vw;
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -115,10 +115,8 @@
             align-items: center;
   }
   #root .pic > div {
-    width: 80vw;
+    width: 100vw;
     height: 80vh;
-    margin-top: -35vh;
-    margin-left: -40vw;
     position: absolute;
     background: url(../pic/hand-2.jpg);
     background-size: contain;
@@ -130,12 +128,12 @@
     background-attachment: initial;
     background-repeat: no-repeat;
     z-index: 0;
-    margin-top: -60vh;
-    margin-left: -65vw;
+    margin-top: -57vh;
+    margin-left: -80vw;
   }
   #root .movie {
     width: 90vw;
-    height: 30vh;
+    height: 26vh;
     margin-bottom: -50vw;
     border: 5px solid white;
     border-radius: 10px;

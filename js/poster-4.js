@@ -26,9 +26,9 @@ chad.animate(smith, smithT);
 //-------------------------------------
 
 let move = [ 
-  {transform: 'translateX(-20vw)'},
+  {transform: 'translateX(-15vw)'},
   {transform: 'translateX(20vw)'},
-  {transform: 'translateX(-20vw)'}
+  {transform: 'translateX(-15vw)'}
   
 ];
 
