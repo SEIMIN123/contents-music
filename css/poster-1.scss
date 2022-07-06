@@ -25,6 +25,12 @@
   }
 }
 
+body::-webkit-scrollbar {
+
+  width: 0;
+  display: none;
+}
+
 @mixin pc {
 
   /* PC (해상도 1024px)*/

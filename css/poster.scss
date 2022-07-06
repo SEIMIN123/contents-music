@@ -33,6 +33,12 @@
   }
 }
 
+body::-webkit-scrollbar {
+
+  width: 0;
+  display: none;
+}
+
 @include pc {
   #root {
     width: 100vw;

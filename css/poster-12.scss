@@ -33,13 +33,18 @@
   }
 }
 
+body::-webkit-scrollbar {
+
+  width: 0;
+  display: none;
+}
+
 @include pc {
   #root {
 
     width: 100vw;
     height: 100vh;
     transition: 1s;
-    // background-color: #ECE93B;
     font-family: 'Permanent Marker', cursive;
     flex-direction: column;
     background-size: cover;
@@ -58,7 +63,7 @@
     .prev {
 
       width: 100vw;
-      height: 70vh;
+      height: 50vh;
       margin: 50px;
       font-size: 10vw;
       position: absolute;
