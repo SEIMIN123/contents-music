@@ -115,8 +115,8 @@
             align-items: center;
   }
   #root .pic > div {
-    width: 100vw;
-    height: 80vh;
+    width: 70vw;
+    height: 30vh;
     position: absolute;
     background: url(../pic/hand-2.jpg);
     background-size: contain;
@@ -128,8 +128,8 @@
     background-attachment: initial;
     background-repeat: no-repeat;
     z-index: 0;
-    margin-top: -57vh;
-    margin-left: -80vw;
+    margin-top: -36vh;
+    margin-left: -85vw;
   }
   #root .movie {
     width: 90vw;
